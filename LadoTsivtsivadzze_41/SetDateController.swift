@@ -42,21 +42,24 @@ class SetDateController: BaseViewController {
         let content = UNMutableNotificationContent()
         content.title = ttl
         content.body = bd
+        content.categoryIdentifier = "reminder alert"
         content.sound = .default
         
         let chosenDate = self.datePicker.date
         let value = Int(Date().distance(to: chosenDate))
+        print("value: \(value)")
         
         if value <= 0 {
+            print("returned")
             return
         }
 
         let nextTriggerDate = Calendar.current.date(byAdding: .second, value: value, to: Date())!
-        let comps = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: nextTriggerDate)
+        let comps = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: nextTriggerDate)
 
         let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: false)
-        print("this is date")
-        print(trigger.nextTriggerDate())
+//        print("this is date")
+//        print(trigger.nextTriggerDate())
         
         let request = UNNotificationRequest(identifier: UUID().uuidString,
                                             content: content,
