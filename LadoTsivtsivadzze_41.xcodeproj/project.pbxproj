@@ -23,6 +23,7 @@
 		243BD4C32689B8E9009B0FB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243BD4C22689B8E9009B0FB8 /* Assets.xcassets */; };
 		243BD4C62689B8E9009B0FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243BD4C42689B8E9009B0FB8 /* LaunchScreen.storyboard */; };
 		243BD4D32689BDFB009B0FB8 /* FilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BD4D22689BDFB009B0FB8 /* FilesManager.swift */; };
+		24DB3E0926904BFC006774D9 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB3E0826904BFC006774D9 /* CoordinatorProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		243BD4C52689B8E9009B0FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		243BD4C72689B8E9009B0FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243BD4D22689BDFB009B0FB8 /* FilesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesManager.swift; sourceTree = "<group>"; };
+		24DB3E0826904BFC006774D9 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +105,10 @@
 		243BD4B52689B8E8009B0FB8 /* LadoTsivtsivadzze_41 */ = {
 			isa = PBXGroup;
 			children = (
+				24DB3E0626904B90006774D9 /* Infrastucture */,
 				242DF826268A479600388891 /* Cell3 */,
 				242DF81F268A2EC100388891 /* Cell2 */,
 				242DF81A268A2B7D00388891 /* Cell */,
-				243BD4CF2689BDD4009B0FB8 /* Managers */,
 				243BD4CD2689B997009B0FB8 /* App */,
 				243BD4BA2689B8E8009B0FB8 /* ReminderController.swift */,
 				243BD4BC2689B8E8009B0FB8 /* Main.storyboard */,
@@ -143,6 +145,23 @@
 				243BD4D22689BDFB009B0FB8 /* FilesManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		24DB3E0626904B90006774D9 /* Infrastucture */ = {
+			isa = PBXGroup;
+			children = (
+				24DB3E0726904B9D006774D9 /* Coordinator */,
+				243BD4CF2689BDD4009B0FB8 /* Managers */,
+			);
+			path = Infrastucture;
+			sourceTree = "<group>";
+		};
+		24DB3E0726904B9D006774D9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				24DB3E0826904BFC006774D9 /* CoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +243,7 @@
 				242DF82C268A49E900388891 /* ContentController.swift in Sources */,
 				242DF829268A47B600388891 /* Cell3.swift in Sources */,
 				242DF81D268A2BA100388891 /* ReminderCell.swift in Sources */,
+				24DB3E0926904BFC006774D9 /* CoordinatorProtocol.swift in Sources */,
 				243BD4D32689BDFB009B0FB8 /* FilesManager.swift in Sources */,
 				243BD4C12689B8E8009B0FB8 /* LadoTsivtsivadzze_41.xcdatamodeld in Sources */,
 				243BD4B72689B8E8009B0FB8 /* AppDelegate.swift in Sources */,
