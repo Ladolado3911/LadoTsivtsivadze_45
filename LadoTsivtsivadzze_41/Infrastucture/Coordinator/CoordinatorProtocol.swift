@@ -17,6 +17,6 @@ protocol CoordinatorProtocol: AnyObject {
     func start()
 //    func proceedToProductDetails(with product: Product?)
 //    func proceedToBuy(with product: Product?)
-    func showSuccessAlert()
+    func goToContent(dirname: String, contentTxt: String, filename: String)
 }
 

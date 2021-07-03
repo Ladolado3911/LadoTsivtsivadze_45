@@ -31,7 +31,13 @@ final class AppCoordinator: CoordinatorProtocol {
         window?.makeKeyAndVisible()
     }
     
-    func showSuccessAlert() {
+    func goToContent(dirname: String, contentTxt: String, filename: String) {
+        let vc = ContentController.instantiateFromStoryboard()
+        vc.contentTxt = contentTxt
+        vc.dirName = dirname
+        vc.fileName = filename
         
+        vc.coordinator = self
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

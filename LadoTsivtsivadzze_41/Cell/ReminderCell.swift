@@ -12,6 +12,8 @@ class ReminderCell: UITableViewCell {
     @IBOutlet weak var categoryName: UILabel!
     @IBOutlet weak var tblView: UITableView!
     
+    
+    var coordinator: CoordinatorProtocol?
     var category: String?
     var rootController: ReminderController?
     
@@ -91,12 +93,10 @@ extension ReminderCell: Table {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ContentController") as? ContentController
         guard let category = category else { return }
-        vc!.contentTxt = fileManager.getContentofFileofDirectory(dirname: category, filename: titles[indexPath.row])
-        vc!.dirName = category
-        vc!.fileName = titles[indexPath.row]
-        self.rootController!.navigationController!.pushViewController(vc!, animated: true)
+        let cont = fileManager.getContentofFileofDirectory(dirname: category, filename: titles[indexPath.row])
+        let file = titles[indexPath.row]
+        rootController!.coordinator?.goToContent(dirname: category, contentTxt: cont!, filename: file)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

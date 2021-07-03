@@ -64,7 +64,7 @@ class FilesManager {
                                                                  includingPropertiesForKeys: nil,
                                                                  options: .skipsHiddenFiles) else { return nil }
         
-        let item = content.filter { $0.lastPathComponent == name2 }[0]
+        let item = content.filter { $0.lastPathComponent == "\(name2).txt" }[0]
         let content2 = try! String(contentsOf: item, encoding: .utf8)
         return content2
     }

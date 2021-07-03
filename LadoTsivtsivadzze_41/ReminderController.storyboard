@@ -50,99 +50,6 @@
             </objects>
             <point key="canvasLocation" x="1015.9420289855074" y="83.705357142857139"/>
         </scene>
-        <!--Edit Controller-->
-        <scene sceneID="znW-m1-EMe">
-            <objects>
-                <viewController storyboardIdentifier="EditController" id="lbj-pp-KKC" customClass="EditController" customModule="LadoTsivtsivadzze_41" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kLb-iN-abY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWy-Xa-Rh4">
-                                <rect key="frame" x="20" y="64" width="374" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sW2-Qr-g7r">
-                                <rect key="frame" x="20" y="114" width="374" height="728"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="GCT-L6-EOb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="nWy-Xa-Rh4" firstAttribute="leading" secondItem="GCT-L6-EOb" secondAttribute="leading" constant="20" id="214-M9-a7q"/>
-                            <constraint firstItem="sW2-Qr-g7r" firstAttribute="top" secondItem="nWy-Xa-Rh4" secondAttribute="bottom" constant="20" id="Dqm-95-UPD"/>
-                            <constraint firstItem="nWy-Xa-Rh4" firstAttribute="top" secondItem="GCT-L6-EOb" secondAttribute="top" constant="20" id="IxI-d5-5Rn"/>
-                            <constraint firstItem="GCT-L6-EOb" firstAttribute="trailing" secondItem="nWy-Xa-Rh4" secondAttribute="trailing" constant="20" id="MmO-aE-SIe"/>
-                            <constraint firstItem="sW2-Qr-g7r" firstAttribute="leading" secondItem="GCT-L6-EOb" secondAttribute="leading" constant="20" id="p9g-Uh-NRC"/>
-                            <constraint firstItem="GCT-L6-EOb" firstAttribute="trailing" secondItem="sW2-Qr-g7r" secondAttribute="trailing" constant="20" id="sZv-yM-KEB"/>
-                            <constraint firstItem="GCT-L6-EOb" firstAttribute="bottom" secondItem="sW2-Qr-g7r" secondAttribute="bottom" constant="20" id="ynm-SE-Msc"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="categoryName" destination="nWy-Xa-Rh4" id="5G4-GH-wUr"/>
-                        <outlet property="tblView" destination="sW2-Qr-g7r" id="V2O-q4-AOC"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m3Q-VT-NXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1962" y="84"/>
-        </scene>
-        <!--Content Controller-->
-        <scene sceneID="VCz-ln-aVD">
-            <objects>
-                <viewController storyboardIdentifier="ContentController" id="uJg-uv-Jaw" customClass="ContentController" customModule="LadoTsivtsivadzze_41" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0Fu-oD-jKA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMf-lR-QmY">
-                                <rect key="frame" x="20" y="64" width="374" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CJK-WQ-axB">
-                                <rect key="frame" x="20" y="114" width="374" height="666"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7K-SL-ATe">
-                                <rect key="frame" x="20" y="800" width="374" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Edit"/>
-                                <connections>
-                                    <action selector="onEdit:" destination="uJg-uv-Jaw" eventType="touchUpInside" id="D42-B5-Ff6"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Axo-OD-QXc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="XMf-lR-QmY" firstAttribute="top" secondItem="Axo-OD-QXc" secondAttribute="top" constant="20" id="HPJ-OM-3R2"/>
-                            <constraint firstItem="Axo-OD-QXc" firstAttribute="bottom" secondItem="c7K-SL-ATe" secondAttribute="bottom" constant="20" id="PVH-3z-R7b"/>
-                            <constraint firstItem="Axo-OD-QXc" firstAttribute="trailing" secondItem="c7K-SL-ATe" secondAttribute="trailing" constant="20" id="VKH-KD-ve5"/>
-                            <constraint firstItem="c7K-SL-ATe" firstAttribute="leading" secondItem="Axo-OD-QXc" secondAttribute="leading" constant="20" id="Wcb-RZ-M9Q"/>
-                            <constraint firstItem="CJK-WQ-axB" firstAttribute="top" secondItem="XMf-lR-QmY" secondAttribute="bottom" constant="20" id="Xba-kj-OAa"/>
-                            <constraint firstItem="Axo-OD-QXc" firstAttribute="trailing" secondItem="XMf-lR-QmY" secondAttribute="trailing" constant="20" id="XoE-Td-EOO"/>
-                            <constraint firstItem="CJK-WQ-axB" firstAttribute="leading" secondItem="Axo-OD-QXc" secondAttribute="leading" constant="20" id="fB4-BL-Dde"/>
-                            <constraint firstItem="Axo-OD-QXc" firstAttribute="trailing" secondItem="CJK-WQ-axB" secondAttribute="trailing" constant="20" id="pEo-en-piQ"/>
-                            <constraint firstItem="XMf-lR-QmY" firstAttribute="leading" secondItem="Axo-OD-QXc" secondAttribute="leading" constant="20" id="xbt-hE-yZT"/>
-                            <constraint firstItem="c7K-SL-ATe" firstAttribute="top" secondItem="CJK-WQ-axB" secondAttribute="bottom" constant="20" id="yL7-Xh-5cc"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="contentView" destination="CJK-WQ-axB" id="xPq-jh-u2S"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Rm-PU-TqT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2715.9420289855075" y="83.705357142857139"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="lBs-gJ-3bi">
             <objects>
@@ -163,9 +70,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

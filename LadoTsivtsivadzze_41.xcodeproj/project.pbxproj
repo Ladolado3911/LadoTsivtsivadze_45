@@ -29,6 +29,8 @@
 		24DB3E0F26904D50006774D9 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB3E0E26904D50006774D9 /* Storyboarded.swift */; };
 		24DB3E1126904D92006774D9 /* ReminderController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DB3E1026904D92006774D9 /* ReminderController.storyboard */; };
 		24DB3E1326904E61006774D9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB3E1226904E61006774D9 /* BaseViewController.swift */; };
+		24DB3E1526904FCA006774D9 /* ContentController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DB3E1426904FCA006774D9 /* ContentController.storyboard */; };
+		24DB3E1726905003006774D9 /* EditController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DB3E1626905003006774D9 /* EditController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		24DB3E0E26904D50006774D9 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		24DB3E1026904D92006774D9 /* ReminderController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReminderController.storyboard; sourceTree = "<group>"; };
 		24DB3E1226904E61006774D9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		24DB3E1426904FCA006774D9 /* ContentController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContentController.storyboard; sourceTree = "<group>"; };
+		24DB3E1626905003006774D9 /* EditController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 				242DF824268A44CB00388891 /* EditController.swift */,
 				242DF82B268A49E900388891 /* ContentController.swift */,
 				24DB3E1026904D92006774D9 /* ReminderController.storyboard */,
+				24DB3E1426904FCA006774D9 /* ContentController.storyboard */,
+				24DB3E1626905003006774D9 /* EditController.storyboard */,
 			);
 			path = LadoTsivtsivadzze_41;
 			sourceTree = "<group>";
@@ -236,8 +242,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DB3E1726905003006774D9 /* EditController.storyboard in Resources */,
 				243BD4C62689B8E9009B0FB8 /* LaunchScreen.storyboard in Resources */,
 				24DB3E1126904D92006774D9 /* ReminderController.storyboard in Resources */,
+				24DB3E1526904FCA006774D9 /* ContentController.storyboard in Resources */,
 				242DF82A268A47B600388891 /* Cell3.xib in Resources */,
 				242DF823268A2EE500388891 /* ContentCell.xib in Resources */,
 				243BD4C32689B8E9009B0FB8 /* Assets.xcassets in Resources */,
