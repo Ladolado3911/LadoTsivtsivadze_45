@@ -44,10 +44,9 @@ class ReminderController: BaseViewController {
         let submitAction = UIAlertAction(title: "Add",
                                          style: .cancel) { [weak self] action in
             guard let self = self else { return }
-            
-            let vc = SetDateController.instantiateFromStoryboard()
-            vc.answer = ac.textFields![0].text
-            self.present(vc, animated: true)
+            let catName = ac.textFields![0].text
+            self.fileManager.createDirectory(name: catName!)
+            self.tblView.reloadData()
         }
         
         let cancelAction = UIAlertAction(title: "Cancel",

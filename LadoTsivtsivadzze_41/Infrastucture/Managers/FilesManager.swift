@@ -66,9 +66,14 @@ class FilesManager {
                                                                  includingPropertiesForKeys: nil,
                                                                  options: .skipsHiddenFiles) else { return nil }
         
-        let item = content.filter { $0.lastPathComponent == "\(name2).txt" }[0]
-        let content2 = try! String(contentsOf: item, encoding: .utf8)
-        return content2
+        let item = content.filter { $0.lastPathComponent == "\(name2).txt" }.first
+        if let item = item {
+            let content2 = try! String(contentsOf: item, encoding: .utf8)
+            return content2
+        }
+        else {
+            return ""
+        }
     }
     
     func updateFile(using text: String, dirname name1: String, filename name2: String) {

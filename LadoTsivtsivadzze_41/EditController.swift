@@ -40,7 +40,8 @@ class EditController: BaseViewController {
 extension EditController: Table {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let category = categoryName2 else { return 0 }
-        return fileManager.getFilesofDirectory(dirname: category)!.count
+        guard let arr = fileManager.getFilesofDirectory(dirname: category) else { return 0 }
+        return arr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
