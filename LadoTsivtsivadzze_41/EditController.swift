@@ -51,14 +51,10 @@ extension EditController: Table {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ContentController") as? ContentController
         guard let categoryName2 = categoryName2 else { return }
         guard let filename = fileManager.getFilesofDirectory(dirname: categoryName2) else { return }
         let file = filename[indexPath.row]
-        print("guard lets passed")
-        vc!.contentTxt = fileManager.getContentofFileofDirectory(dirname: categoryName2, filename: file)
-        vc!.dirName = categoryName2
-        vc!.fileName = file
-        self.navigationController?.pushViewController(vc!, animated: true)
+        let contentTxt = fileManager.getContentofFileofDirectory(dirname: categoryName2, filename: file)
+        coordinator?.goToContent(dirname: categoryName2, contentTxt: contentTxt!, filename: file)
     }
 }

@@ -40,4 +40,11 @@ final class AppCoordinator: CoordinatorProtocol {
         vc.coordinator = self
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func goToEdit(categoryName: String) {
+        let vc = EditController.instantiateFromStoryboard()
+        vc.categoryName2 = categoryName
+        vc.coordinator = self
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

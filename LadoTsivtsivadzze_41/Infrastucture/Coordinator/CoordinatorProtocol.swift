@@ -18,5 +18,6 @@ protocol CoordinatorProtocol: AnyObject {
 //    func proceedToProductDetails(with product: Product?)
 //    func proceedToBuy(with product: Product?)
     func goToContent(dirname: String, contentTxt: String, filename: String)
+    func goToEdit(categoryName: String)
 }
 
