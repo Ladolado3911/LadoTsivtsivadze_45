@@ -23,7 +23,7 @@ class FilesManager {
         guard let content = try? fileManager.contentsOfDirectory(at: appUrl!,
                                                       includingPropertiesForKeys: nil,
                                                       options: .skipsHiddenFiles) else { return [""] }
-        return content.map { $0.lastPathComponent }
+        return content.map { $0.lastPathComponent }.filter { !$0.contains("sql") }
     }
     
     func createDirectory(name dirName: String) {
@@ -48,13 +48,15 @@ class FilesManager {
                                                                  includingPropertiesForKeys: nil,
                                                                  options: .skipsHiddenFiles) else { return nil }
         let content2 = content.map { $0.lastPathComponent }
+        let content3 = content2.filter { $0.contains("txt") }
         var result = [String]()
-        content2.forEach { str in
+        content3.forEach { str in
             var tempStr = str
             tempStr.removeLast(4)
-            print(tempStr)
+            //print(tempStr)
             result.append(tempStr)
         }
+        print(result)
         return result
     }
     
