@@ -62,10 +62,13 @@ class ReminderCell: UITableViewCell {
         let submitAction = UIAlertAction(title: "Enter",
                                          style: .cancel) { [weak self] action in
             guard let self = self else { return }
-            let answer = ac.textFields![0].text
-            self.fileManager.createReminderTxt(name: answer ?? "", dirName: self.category!)
-            self.tblView.reloadData()
-            self.rootController!.tblView.reloadData()
+            
+            let vc = SetDateController.instantiateFromStoryboard()
+            vc.answer = ac.textFields![0].text
+            vc.dirName = self.category
+            vc.rootCell = self
+            vc.reminderController = self.rootController
+            self.rootController!.present(vc, animated: true)
         }
         
         let cancelAction = UIAlertAction(title: "Cancel",

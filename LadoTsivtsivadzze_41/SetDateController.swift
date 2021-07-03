@@ -11,8 +11,10 @@ class SetDateController: BaseViewController {
 
     @IBOutlet weak var datePicker: UIDatePicker!
     var answer: String?
+    var dirName: String?
     var reminderController: ReminderController?
     var editController: EditController?
+    var rootCell: ReminderCell?
     let filesManager = FilesManager()
     
     override func viewDidLoad() {
@@ -22,14 +24,14 @@ class SetDateController: BaseViewController {
     
     @IBAction func onSetReminder(_ sender: UIButton) {
         guard let answer = answer else { return }
+        guard let dirName = dirName else { return }
 
-        
-        
         dismiss(animated: true) { [weak self] in
             guard let self = self else { return }
-            self.filesManager.createDirectory(name: answer)
             if let reminderController = self.reminderController {
+                self.filesManager.createReminderTxt(name: answer, dirName: dirName)
                 reminderController.tblView.reloadData()
+                self.rootCell!.tblView.reloadData()
             }
             else if let editController = self.editController {
                 editController.tblView.reloadData()
