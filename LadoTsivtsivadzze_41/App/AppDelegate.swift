@@ -21,11 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
                 print("Permission granted")
-                UserDefaults.standard.setValue(true, forKey: "Permission")
+                //UserDefaults.standard.setValue(true, forKey: "Permission")
             }
             else {
                 print("Not allowed")
-                UserDefaults.standard.setValue(false, forKey: "Permission")
+                //UserDefaults.standard.setValue(false, forKey: "Permission")
             }
         }
         return true

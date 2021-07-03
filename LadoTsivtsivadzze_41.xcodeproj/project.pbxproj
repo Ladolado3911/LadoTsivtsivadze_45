@@ -23,6 +23,8 @@
 		243BD4C32689B8E9009B0FB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243BD4C22689B8E9009B0FB8 /* Assets.xcassets */; };
 		243BD4C62689B8E9009B0FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243BD4C42689B8E9009B0FB8 /* LaunchScreen.storyboard */; };
 		243BD4D32689BDFB009B0FB8 /* FilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243BD4D22689BDFB009B0FB8 /* FilesManager.swift */; };
+		245E14332690BA630078F1BC /* SetDateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E14322690BA630078F1BC /* SetDateController.swift */; };
+		245E14352690BA980078F1BC /* SetDateController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245E14342690BA980078F1BC /* SetDateController.storyboard */; };
 		24DB3E0926904BFC006774D9 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB3E0826904BFC006774D9 /* CoordinatorProtocol.swift */; };
 		24DB3E0B26904C7C006774D9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB3E0A26904C7C006774D9 /* AppCoordinator.swift */; };
 		24DB3E0D26904D30006774D9 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB3E0C26904D30006774D9 /* CoordinatorDelegate.swift */; };
@@ -52,6 +54,8 @@
 		243BD4C52689B8E9009B0FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		243BD4C72689B8E9009B0FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		243BD4D22689BDFB009B0FB8 /* FilesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesManager.swift; sourceTree = "<group>"; };
+		245E14322690BA630078F1BC /* SetDateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDateController.swift; sourceTree = "<group>"; };
+		245E14342690BA980078F1BC /* SetDateController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetDateController.storyboard; sourceTree = "<group>"; };
 		24DB3E0826904BFC006774D9 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		24DB3E0A26904C7C006774D9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		24DB3E0C26904D30006774D9 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 				242DF81A268A2B7D00388891 /* Cell */,
 				243BD4CD2689B997009B0FB8 /* App */,
 				243BD4BA2689B8E8009B0FB8 /* ReminderController.swift */,
+				245E14322690BA630078F1BC /* SetDateController.swift */,
 				243BD4BC2689B8E8009B0FB8 /* Main.storyboard */,
 				243BD4CE2689B9A3009B0FB8 /* Resources */,
 				243BD4C42689B8E9009B0FB8 /* LaunchScreen.storyboard */,
@@ -132,9 +137,7 @@
 				243BD4BF2689B8E8009B0FB8 /* LadoTsivtsivadzze_41.xcdatamodeld */,
 				242DF824268A44CB00388891 /* EditController.swift */,
 				242DF82B268A49E900388891 /* ContentController.swift */,
-				24DB3E1026904D92006774D9 /* ReminderController.storyboard */,
-				24DB3E1426904FCA006774D9 /* ContentController.storyboard */,
-				24DB3E1626905003006774D9 /* EditController.storyboard */,
+				245E14312690BA2C0078F1BC /* Storyboards */,
 			);
 			path = LadoTsivtsivadzze_41;
 			sourceTree = "<group>";
@@ -162,6 +165,17 @@
 				243BD4D22689BDFB009B0FB8 /* FilesManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		245E14312690BA2C0078F1BC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				24DB3E1026904D92006774D9 /* ReminderController.storyboard */,
+				24DB3E1426904FCA006774D9 /* ContentController.storyboard */,
+				24DB3E1626905003006774D9 /* EditController.storyboard */,
+				245E14342690BA980078F1BC /* SetDateController.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		24DB3E0626904B90006774D9 /* Infrastucture */ = {
@@ -251,6 +265,7 @@
 				243BD4C32689B8E9009B0FB8 /* Assets.xcassets in Resources */,
 				243BD4BE2689B8E8009B0FB8 /* Main.storyboard in Resources */,
 				242DF81E268A2BA100388891 /* ReminderCell.xib in Resources */,
+				245E14352690BA980078F1BC /* SetDateController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245E14332690BA630078F1BC /* SetDateController.swift in Sources */,
 				24DB3E0B26904C7C006774D9 /* AppCoordinator.swift in Sources */,
 				243BD4BB2689B8E8009B0FB8 /* ReminderController.swift in Sources */,
 				242DF825268A44CB00388891 /* EditController.swift in Sources */,
