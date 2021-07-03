@@ -13,7 +13,6 @@ class SetDateController: BaseViewController {
     var answer: String?
     var dirName: String?
     var reminderController: ReminderController?
-    var editController: EditController?
     var rootCell: ReminderCell?
     let filesManager = FilesManager()
     
@@ -32,13 +31,25 @@ class SetDateController: BaseViewController {
                 self.filesManager.createReminderTxt(name: answer, dirName: dirName)
                 reminderController.tblView.reloadData()
                 self.rootCell!.tblView.reloadData()
-            }
-            else if let editController = self.editController {
-                editController.tblView.reloadData()
-            }
-            else {
-                return
+                let chosenDate = self.datePicker.date
+
+                let value = Int(Date().distance(to: chosenDate))
+                //print(value)
+
+                let nextTriggerDate = Calendar.current.date(byAdding: .second, value: value, to: Date())!
+                let comps = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: nextTriggerDate)
+
+                let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: false)
+                print("this is date")
+                print(trigger.nextTriggerDate())
             }
         }
+    }
+    
+    func registerNotification(title ttl: String, body bd: String) {
+        let content = UNMutableNotificationContent()
+        content.title = ttl
+        content.body = bd
+        content.sound = .default
     }
 }
