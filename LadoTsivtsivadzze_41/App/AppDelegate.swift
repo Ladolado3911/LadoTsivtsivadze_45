@@ -16,16 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // if i click not allow, it won't pop up anymore
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
                 print("Permission granted")
+                UserDefaults.standard.setValue(true, forKey: "Permission")
             }
-            else if let error = error {
-                print("error \(error)")
+            else {
+                print("Not allowed")
+                UserDefaults.standard.setValue(false, forKey: "Permission")
             }
         }
-        
         return true
     }
 
