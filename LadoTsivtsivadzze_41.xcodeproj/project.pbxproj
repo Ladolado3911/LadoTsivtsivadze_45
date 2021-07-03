@@ -28,6 +28,7 @@
 		24DB3E0D26904D30006774D9 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB3E0C26904D30006774D9 /* CoordinatorDelegate.swift */; };
 		24DB3E0F26904D50006774D9 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB3E0E26904D50006774D9 /* Storyboarded.swift */; };
 		24DB3E1126904D92006774D9 /* ReminderController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DB3E1026904D92006774D9 /* ReminderController.storyboard */; };
+		24DB3E1326904E61006774D9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DB3E1226904E61006774D9 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		24DB3E0C26904D30006774D9 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		24DB3E0E26904D50006774D9 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		24DB3E1026904D92006774D9 /* ReminderController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReminderController.storyboard; sourceTree = "<group>"; };
+		24DB3E1226904E61006774D9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			children = (
 				24DB3E0726904B9D006774D9 /* Coordinator */,
 				243BD4CF2689BDD4009B0FB8 /* Managers */,
+				24DB3E1226904E61006774D9 /* BaseViewController.swift */,
 			);
 			path = Infrastucture;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				242DF825268A44CB00388891 /* EditController.swift in Sources */,
 				242DF822268A2EE500388891 /* ContentCell.swift in Sources */,
 				242DF82C268A49E900388891 /* ContentController.swift in Sources */,
+				24DB3E1326904E61006774D9 /* BaseViewController.swift in Sources */,
 				242DF829268A47B600388891 /* Cell3.swift in Sources */,
 				242DF81D268A2BA100388891 /* ReminderCell.swift in Sources */,
 				24DB3E0926904BFC006774D9 /* CoordinatorProtocol.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContentController: UIViewController {
+class ContentController: BaseViewController {
     
     @IBOutlet weak var contentView: UITextView!
     var contentTxt: String?

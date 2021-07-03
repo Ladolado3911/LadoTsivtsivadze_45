@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditController: UIViewController {
+class EditController: BaseViewController {
     
     @IBOutlet weak var categoryName: UILabel!
     @IBOutlet weak var tblView: UITableView!

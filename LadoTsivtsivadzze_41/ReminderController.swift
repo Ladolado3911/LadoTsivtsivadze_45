@@ -9,7 +9,7 @@ import UIKit
 
 typealias Table = UITableViewDataSource & UITableViewDelegate
 
-class ReminderController: UIViewController {
+class ReminderController: BaseViewController {
     
     @IBOutlet weak var tblView: UITableView!
     private var fileManager = FilesManager()
